@@ -67,6 +67,7 @@
     <script>
         $(document).ready(function() {
             $("table").hide();
+
             $("#blah").click(function() {
 
 
@@ -85,7 +86,7 @@
 
                         // employee_data += '<td>' + '<input type="checkbox" name="checkbox-' + value + 'id ="checkbox"' + value + '" value="' + value + '" class="custom" />' + '  </td>';
                         if (value.completed == false) {
-                            console.log(value)
+                            // console.log(value)
                             employee_data += '<td>' + '<input type="checkbox" disabled=true name="checkbox-' + value + 'id ="checkbox"' + value + '" value="' + value + '" class="custom" />' + '  </td>';
 
                         } else {
@@ -97,40 +98,36 @@
 
 
                     });
+
+
+      
+
+
                     $('#table').append(employee_data);
+                    console.log("loaded");
 
 
+               
 
                     $('input[type="checkbox"]').click(function() {
-
-
-                        if (check = $("input:checkbox:checked").length) {
-                            if (check == 5) {
-                                alert(" 5 task is completed");
+                            let P=new Promise((res,rej)=>{
+                            if($("input:checkbox:checked").length%5==0){
+                                res();
                             }
-
-
-
-
-                        } else {
-
-                            alert("less than 5 task is completed");
-                            // alert("5 task not completed");
-                        }
-
-
-
-                    });
-
-
-
-
-
-
-
+                            else{
+                                rej();
+                            }});
+                        
+                        P.then(()=>{console.log("completed");
+                        alert(" 5 task is completed");}).catch(()=>{console.log("rejected")})                   
+                    })
                 });
 
+
+                
+
             });
+           
 
 
 
@@ -139,6 +136,8 @@
 
         });
 
+
+       
         function preventBack() {
             window.history.forward();
 
@@ -147,6 +146,10 @@
         window.onunload = function() {
             null;
         }
+
+
+
+      
     </script>
 
 </body>
