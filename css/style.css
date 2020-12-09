@@ -51,3 +51,11 @@ header {
     background-image: url(/images/4.jpg);
     background-size: cover;
 }
+
+input[type=text]:focus {
+    outline: 2px solid blue;
+}
+
+input[type=password]:focus {
+    outline: 2px solid blue;
+}
