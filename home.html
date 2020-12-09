@@ -44,8 +44,8 @@
         </div>
     </nav>
 
-    <h1 class="jj">
-        Welcome click on todo know the daily task completed
+    <h1 id="jj">
+        Welcome!<br> Click on todo to know the daily task completed
     </h1>
     <table class="table table-striped table-transparent" id="table">
         <tr>
@@ -72,7 +72,9 @@
 
 
                 $.getJSON("https://jsonplaceholder.typicode.com/todos", function(data) {
+                    $("#jj").hide(1000, "swing");
                     $("table").show(2000, "linear");
+
                     // JSON result in `data` variable
                     var employee_data = '';
                     $.each(data, function(key, value) {
