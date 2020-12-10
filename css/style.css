@@ -18,8 +18,8 @@
             border: inset black;
             border-style: ridge;
             border-radius: 20px;
-            margin-right: 30%;
-            margin-left: 30%;
+            margin-right: 32%;
+            margin-left: 32%;
             padding: 3%;
             filter: alpha(opacity=60);
             font-family: Georgia, 'Times New Roman', Times, serif;
@@ -75,4 +75,20 @@
             transform-origin: 50% 100%;
             display: inline-block;
             line-height: 1em;
+        }
+        
+        #username {
+            width: 60%;
+            box-sizing: border-box;
+            /* add this */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+        
+        #password {
+            width: 60%;
+            box-sizing: border-box;
+            /* add this */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
         }
