@@ -29,7 +29,9 @@ header {
 #home {
     background-image: url(/images/1\ \(1\).jpg);
     background-size: cover;
-    background-size: 80%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #table {
